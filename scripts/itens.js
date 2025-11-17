@@ -12,11 +12,11 @@ detalhes.id = "detalhes";
 document.body.appendChild(detalhes);
 detalhes.style.display = "none";
 
-const IP_DO_BACKEND = "10.88.199.138";
+const IP_DO_BACKEND = "192.168.15.74";
 const PORTA = 3001;
 const URL_BASE_API = `http://${IP_DO_BACKEND}:${PORTA}`;
 
-let allItems = data.items;
+let allItems = [];
 
 async function buscarItemsDaAPI() {
   lista.innerHTML = `<p>Carregando itens...</p>`;
@@ -29,9 +29,8 @@ async function buscarItemsDaAPI() {
 
     const data = await resposta.json();
 
-    if (!Array.isArray(data)) {
-      console.error("Dados recebidos não são um array:", data);
-      throw new Error("A API não retornou um array de itens.");
+    if (!data || !Array.isArray(data.items)) {
+      throw new Error("A API não retornou a estrutura de dados esperada.");
     }
 
     allItems = data.items;
@@ -44,9 +43,15 @@ async function buscarItemsDaAPI() {
 }
 
 function popularFiltros(items) {
-  const categories = [...new Set(items.map((item) => item.category))];
-  const locations = [...new Set(items.map((item) => item.location))];
-  const statuses = [...new Set(items.map((item) => item.status))];
+  const categories = [...new Set(items.map((item) => item.category))].filter(
+    Boolean
+  );
+  const locations = [...new Set(items.map((item) => item.location))].filter(
+    Boolean
+  );
+  const statuses = [...new Set(items.map((item) => item.status))].filter(
+    Boolean
+  );
 
   selectCategory.innerHTML =
     '<option value="todos">Todas as Categorias</option>';
@@ -54,16 +59,13 @@ function popularFiltros(items) {
   selectStatus.innerHTML = '<option value="todos">Todos os Status</option>';
 
   categories.forEach((cat) => {
-    if (cat)
-      selectCategory.innerHTML += `<option value="${cat}">${cat}</option>`;
+    selectCategory.innerHTML += `<option value="${cat}">${cat}</option>`;
   });
   locations.forEach((loc) => {
-    if (loc)
-      selectLocation.innerHTML += `<option value="${loc}">${loc}</option>`;
+    selectLocation.innerHTML += `<option value="${loc}">${loc}</option>`;
   });
   statuses.forEach((stat) => {
-    if (stat)
-      selectStatus.innerHTML += `<option value="${stat}">${stat}</option>`;
+    selectStatus.innerHTML += `<option value="${stat}">${stat}</option>`;
   });
 }
 
