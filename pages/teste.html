@@ -1,94 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Itens Encontrados</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Buscar Item</title>
+    <link rel="stylesheet" href="../assets/style/itens.css">
 </head>
 
 <body>
+    <h2>Buscar Item</h2>
 
-    <h1>Itens Perdidos e Achados</h1>
+    <!-- Campo para buscar pelo nome -->
+    <input type="text" id="inputBuscar" placeholder="Digite o nome do item...">
+    <button id="btnBuscar">Buscar por nome</button>
 
-    <div class="filtros-container">
+    <br><br>
 
-        <div class="filtro-grupo">
-            <label for="inputBuscar">Buscar:</label>
-            <input type="text" id="inputBuscar" placeholder="Buscar por categoria ou local...">
-            <button id="btnBuscar">Buscar</button>
-        </div>
+    <!-- Botão para buscar todos -->
+    <button onclick="buscarItens()">Buscar Todos os Itens</button>
 
-        <div class="filtro-grupo">
-            <label for="btnBuscarTodos" style="visibility: hidden;">Ação</label>
-            <button id="btnBuscarTodos">Buscar Todos</button>
-        </div>
+    <div id="resultado"></div>
 
-        <div class="filtro-grupo">
-            <label for="selectCategory">Categoria:</label>
-            <select id="selectCategory">
-                <option value="todos">Todas as Categorias</option>
-                <option value="eletronicos">Eletrônicos</option>
-                <option value="documentos">Documentos</option>
-                <option value="roupas">Vestuário</option>
-                <option value="acessorios">Acessórios</option>
-                <option value="Recipientes">Recipientes</option>
-                <option value="material escolar">Material Escolar</option>
-                <option value="outros">Outros</option>
-            </select>
-        </div>
+    <div id="imagem"></div>
 
-        <div class="filtro-grupo">
-            <label for="selectLocation">Local:</label>
-            <select id="selectLocation">
-                <option value="todos">Todos os Locais</option>
-                <option value="Cantina">Cantina</option>
-                <option value="Biblioteca">Biblioteca</option>
-                <option value="Lab. de Informática">Lab. de Informática</option>
-                <option value="Sala 104">Sala 104</option>
-                <option value="Corredor principal">Corredor principal</option>
-                <option value="Sala 201">Sala 201</option>
-                <option value="Banheiro feminino">Banheiro feminino</option>
-                <option value="Vestiário masculino">Vestiário masculino</option>
-                <option value="Auditório">Auditório</option>
-                <option value="Entrada principal">Entrada principal</option>
-                <option value="Sala 202">Sala 202</option>
-                <option value="Ginásio">Ginásio</option>
-                <option value="Estacionamento">Estacionamento</option>
-                <option value="Sala 101">Sala 101</option>
-                <option value="Refeitório">Refeitório</option>
-                <option value="Quadra">Quadra</option>
-                <option value="Secretaria">Secretaria</option>
-                <option value="Pátio">Pátio</option>
-                <option value="Sala 301">Sala 301</option>
-                <option value="Corredor B">Corredor B</option>
-                <option value="Sala dos Professores">Sala dos Professores</option>
-            </select>
-        </div>
-
-        <div class="filtro-grupo">
-            <label for="selectStatus">Status:</label>
-            <select id="selectStatus">
-                <option value="todos">Todos os Status</option>
-                <option value="encontrado">Encontrado</option>
-                <option value="devolvido">Devolvido</option>
-                <option value="perdido">Perdido</option>
-            </select>
-        </div>
-
-        <div class="filtro-grupo">
-            <label for="btnResetar" style="visibility: hidden;">Ação</label>
-            <button id="btnResetar">Limpar Filtros</button>
-        </div>
-    </div>
-
-    <hr>
-
-    <main class="item-grid"></main>
-
-    <script src="../scripts/itens.js"></script>
-
+    <script src="../scripts/itensbackup.js"></script>
 </body>
 
 </html>

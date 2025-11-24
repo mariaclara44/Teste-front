@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+html, body {
+    background: #611824;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    color: #222;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 110px;
+    background: #4d121c;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.logo {
+    height: 120px;
+}
+
+main {
+    padding-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CONTEINER DE LISTAGEM */
+#resultado {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 28px;
+    padding: 20px;
+}
+
+/* CARD DE ITEM — agora profissional */
+.item-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: 0.25s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.16);
+}
+
+/* TITULO */
+.item-card h3 {
+    color: #611824;
+    margin: 8px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* IMAGEM PROFISSIONAL */
+.item-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* TEXTOS */
+.item-card p {
+    margin: 6px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.item-card strong {
+    color: #4d121c;
+}
+
+/* INPUT */
+input {
+    border-radius: 14px;
+    padding: 12px;
+    width: 16rem;
+    background: #7c1d2c;
+    border: 1px solid #3d0c13;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+input:focus {
+    border-color: #d1a8af;
+    background: #6a1824;
+}
+
+/* BOTÃO */
+.botao {
+    background: #7c1d2c;
+    color: white;
+    padding: 12px 26px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.25s ease;
+}
+
+.botao:hover {
+    background: #5b1220;
+    transform: translateY(-2px);
+}
+
+/* FOOTER */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    background: #4d121c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
+}
