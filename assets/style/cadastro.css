@@ -116,7 +116,7 @@ input::placeholder {
 }
 
 main {
-    min-height: calc(100vh - 100px - 60px);
+    min-height: calc(100vh - 100px - 55px);
     display: flex;
     justify-content: center;
     align-items: center;
