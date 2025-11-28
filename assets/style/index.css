@@ -1,107 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teste</title>
+    <link rel="stylesheet" href="./assets/style/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="./assets/img/lostandfound.png" class="logo" alt="Logo" />
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Inter', sans-serif;
-    background-color: #7a1f2b;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
+      <div class="config">
+        <i class="fa-solid fa-gear config"></i>
+      </div>
+    </header>
 
-header {
-    background-color: #5b1622;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-}
+    <main>
+      <section>
+        <h4 id="login-da-canta">Login</h4>
+        <form action="../index.html" method="get">
+          <div class="formulario">
+            <div class="email">
+              <label for="email"></label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Digite seu e-mail..."
+                required
+              />
+            </div>
 
-.config {
-    font-size: 40px; 
-    color: white; 
-    cursor: pointer;
-    transition: transform 0.3s;
-    margin-right: 20px;
-}
+            <div class="senha">
+              <label for="senha"></label>
+              <input
+                type="password"
+                name="senha"
+                id="senha"
+                placeholder="Digite sua senha..."
+                required
+              />
+            </div>
+          </div>
 
-.config:hover {
-    transform: rotate(30deg); 
-}
+          <button class="botao" type="submit">Entrar</button>
+        </form>
 
-.logo {
-    height: 160px;
-}
-
-main {
-    min-height: calc(100vh - 80px - 60px);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 100px 0 60px; 
-}
-
-section {
-    background-color: white;
-    text-align: center;
-    color: black;
-    font-size: 30px;
-    padding: 3.5rem;
-    border-radius: 10px;
-    border: 8px solid #5d0f15;
-    width: 20%; 
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-input {
-    width: 20rem;
-    margin: 20px 5px 5px 5px;
-    padding: 8px 12px;
-    border-radius: 15px;
-    font-size: 15px;
-    background-color: #7a1f2b;
-    color: aliceblue;
-    border-radius: 20px;
-}
-
-input::placeholder {
-    color:rgb(209, 209, 209); 
-    opacity: 1;
-}
-
-.botao {
-    background-color: #7a1f2b;
-    border-radius: 25px;
-    color: aliceblue;
-    padding: 15px 32px;
-    font-size: 16px;
-    margin-top: 35px;
-    cursor: pointer;
-    transition: background-color 0.5s;
-}
-
-.botao:hover {
-    background-color: #5b1622;
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #5b1622;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
-    z-index: 1000;
-}
+        <h6 id="criar-conta">
+          <a href="./pages/cadastro.html">Não tem conta? Cadastre-se </a>
+        </h6>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 Lost & Found — Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
