@@ -1,33 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
 
 <head>
-     
   <meta charset="UTF-8" />
-     
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Teste</title>
-     
+  <title>Lost & Found</title>
+
   <link rel="stylesheet" href="/assets/style/inicial.css" />
-     
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-     
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     
-  <link      
+  <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-          rel="stylesheet"     />
-     
-  <link       rel="stylesheet"       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"  
-      />
-   
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
- 
-
 <body>
-      <header>
+
+  <!-- HEADER -->
+  <header>
     <div class="logo">
       <img src="/assets/img/lostandfound.png" alt="Logo">
     </div>
@@ -37,34 +30,63 @@
     </div>
   </header>
 
+  <!-- MAIN -->
+  <main>
+    <section class="intro">
+      <h1>Lost & Found</h1>
+      <p>Se conecte aos seus tesouros!</p>
 
-      <main>
-            <section class="intro">
-                  <h1>Lost & Found</h1>
-                  <p>Se conecte aos seus tesouros!</p>
+      <div class="search-bar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Perdeu? Busque aqui" />
+      </div>
+    </section>
 
-          <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Perdeu? Busque aqui" />
-            </div>
-              </section>
+    <section class="center-image">
+      <img src="../assets/img/conection.png" alt="Conexões" />
+    </section>
 
-            <section class="center-image">
-                  <img src="../assets/img/conection.png" alt="Conexoes" />
-              </section>
+    <section class="recent-items">
+      <h2>Itens</h2>
+      <div id="recentItemsGrid" class="items-grid"></div>
+    </section>
+  </main>
 
-                    <section class="recent-items">
-                  <h2>Itens</h2>
-                              <div id="recentItemsGrid" class="items-grid">
-                                    </div>
-              </section>
-        </main>
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Lost & Found — Todos os direitos reservados.</p>
+  </footer>
 
-      <footer>
-          <p>© 2025 Lost & Found — Todos os direitos reservados.</p>
-        </footer>
-    </body>
+  <!-- MODAL DE DETALHES -->
+  <div id="itemModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
 
-<script src="../scripts/itensbackup.js"></script>
+      <img id="modalImg" alt="Imagem do item">
+
+      <h2 id="modalTitle"></h2>
+      <p id="modalLocation"></p>
+      <p id="modalDescription"></p>
+      <p id="modalStatus"></p>
+    </div>
+  </div>
+
+  <div id="itemModal">
+    <div class="modal-content">
+
+      <span class="close">&times;</span>
+
+      <img src="" alt="Imagem do item">
+
+      <h2></h2>
+
+      <p class="modal-location"></p>
+      <p class="modal-status"></p>
+
+    </div>
+  </div>
+  <script src="../scripts/itensbackup.js"></script>
+
+</body>
 
 </html>
