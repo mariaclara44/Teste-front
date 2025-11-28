@@ -1,45 +1,58 @@
 const BASE_URL = "http://localhost:3001";
 
-const input = document.getElementById("inputBuscar");
-const btnBuscar = document.getElementById("btnBuscar");
-const btnTodos = document.getElementById("btnTodos");
-const container = document.getElementById("itemsContainer");
+const inputBusca = document.querySelector(".search-bar input");
+const grid = document.getElementById("recentItemsGrid");
 
-async function carregarTodos() {
-  const res = await fetch(`${BASE_URL}/itens`);
-  const data = await res.json();
-  mostrarItens(data.items);
+carregarRecentes();
+
+inputBusca.addEventListener("input", () => {
+  const nome = inputBusca.value.trim();
+  if (nome === "") {
+    carregarRecentes();
+  } else {
+    buscarPorNome(nome);
+  }
+});
+
+async function buscarPorNome(nome) {
+  try {
+    const res = await fetch(
+      `${BASE_URL}/itens?title=${encodeURIComponent(nome)}`
+    );
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    mostrarItens(data.items);
+  } catch {
+    grid.innerHTML = "<p>Erro ao buscar itens.</p>";
+  }
 }
 
-async function buscarPorNome() {
-  const nome = input.value.trim();
-
-  if (nome === "") return carregarTodos();
-
-  const res = await fetch(`${BASE_URL}/itens?title=${nome}`);
-  const data = await res.json();
-
-  mostrarItens(data.items);
+async function carregarRecentes() {
+  try {
+    const res = await fetch(`${BASE_URL}/itens`);
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    mostrarItens(data.items);
+  } catch {
+    grid.innerHTML = "<p>Erro ao carregar itens.</p>";
+  }
 }
 
 function mostrarItens(lista) {
-  container.innerHTML = "";
+  grid.innerHTML = "";
+  if (!lista || lista.length === 0) {
+    grid.innerHTML = "<p>Nenhum item encontrado.</p>";
+    return;
+  }
 
   lista.forEach((item) => {
     const card = document.createElement("div");
     card.classList.add("item-card");
-
     card.innerHTML = `
-            <img src="${item.imageUrl}" alt="">
-            <h3>${item.title}</h3>
-            <p>${item.location}</p>
-        `;
-
-    container.appendChild(card);
+      <img src="${item.imageUrl}" alt="${item.title}">
+      <h3>${item.title}</h3>
+      <p>${item.location}</p>
+    `;
+    grid.appendChild(card);
   });
 }
-
-btnBuscar.addEventListener("click", buscarPorNome);
-btnTodos.addEventListener("click", carregarTodos);
-
-carregarTodos();

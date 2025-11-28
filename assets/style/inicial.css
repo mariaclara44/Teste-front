@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap');
 
-
-html, body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
     width: 100%;
     height: 100%;
     font-family: 'Inter', sans-serif;
@@ -12,35 +16,59 @@ html, body {
     overflow-y: scroll;
 }
 
+/* ========== HEADER FIXA NO TOPO ========== */
 header {
     background-color: #5b1622;
+    width: 100%;
+    height: 90px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 0 15px;
+    align-items: center;
+    padding: 0 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.config i {
+    font-size: 48px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.config i:hover {
+    transform: scale(1.1);
 }
 
 .config {
-    font-size: 40px; 
-    color: white; 
+    font-size: 42px;
+    color: white;
     cursor: pointer;
     transition: transform 0.3s;
-    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
 }
 
 .config:hover {
-    transform: rotate(30deg); 
+    transform: rotate(30deg);
 }
 
-.logo {
-    height: 100px;
-}
-
+/* MAIN */
 main {
     text-align: center;
-    padding: 40px 0;
+    padding: 140px 0 40px 0;
 }
 
+/* INTRO */
 .intro h1 {
     font-size: 55px;
     margin: 0;
@@ -54,15 +82,16 @@ main {
     font-weight: 500;
 }
 
+/* SEARCH BAR */
 .search-bar {
     background-color: #4a0f18;
     width: 600px;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 14px 20px;
     border-radius: 40px;
     display: flex;
     align-items: center;
-    gap: 12px; 
+    gap: 12px;
 }
 
 .search-bar i {
@@ -71,20 +100,22 @@ main {
 }
 
 .search-bar input {
-    flex: 1; 
-    border: none; 
-    outline: none; 
+    flex: 1;
+    border: none;
+    outline: none;
     background: none;
-    color: white; 
+    color: white;
     font-size: 17px;
 }
 
+/* CENTER IMAGE */
 .center-image img {
     width: 450px;
     margin: 20px auto;
     display: block;
 }
 
+/* RECENT ITEMS */
 .recent-items h2 {
     font-size: 32px;
     margin-bottom: 30px;
@@ -99,6 +130,7 @@ main {
     align-items: flex-start;
 }
 
+/* ========== CARDS ANIMADOS ========== */
 .item-card {
     background-color: white;
     width: 230px;
@@ -106,6 +138,13 @@ main {
     padding: 20px;
     border-radius: 20px;
     text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.20);
 }
 
 .item-card img {
@@ -135,9 +174,8 @@ main {
     margin: 0;
 }
 
+/* FOOTER */
 footer {
-    bottom: 0;
-    left: 0;
     width: 100%;
     height: 60px;
     background-color: #5b1622;
@@ -146,6 +184,5 @@ footer {
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
-    z-index: 1000;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
 }
