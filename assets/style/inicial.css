@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap');
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header {
+    background-color: #5b1622;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.config {
+    font-size: 40px; 
+    color: white; 
+    cursor: pointer;
+    transition: transform 0.3s;
+    margin-right: 20px;
+}
+
+.config:hover {
+    transform: rotate(30deg); 
+}
+
+.logo {
+    height: 100px;
+}
+
+main {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.intro h1 {
+    font-size: 55px;
+    margin: 0;
+    font-weight: 900;
+}
+
+.intro p {
+    font-size: 22px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.search-bar {
+    background-color: #4a0f18;
+    width: 600px;
+    margin: 0 auto; 
+    padding: 14px 20px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+}
+
+.search-bar i {
+    font-size: 20px;
+    color: white;
+}
+
+.search-bar input {
+    flex: 1; 
+    border: none; 
+    outline: none; 
+    background: none;
+    color: white; 
+    font-size: 17px;
+}
+
+.center-image img {
+    width: 450px;
+    margin: 20px auto;
+    display: block;
+}
+
+.recent-items h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.items-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.item-card {
+    background-color: white;
+    width: 230px;
+    min-height: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.item-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.item-card button {
+    background-color: #5b1622;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item-card button:hover {
+    background-color: #7a1f2b;
+}
+
+.item-card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #5b1622;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+

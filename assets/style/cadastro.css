@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap');
 
-
 html, body {
     margin: 0;
     padding: 0;
@@ -33,19 +32,18 @@ header {
 }
 
 .logo {
-    height: 160px;
+    height: 100px;
 }
 
 
 .container {
     width: 50%;
-    margin: 40px auto;
+    margin: 0 auto;
     background: white;
     padding: 40px;
     border-radius: 20px;
     border: 8px solid #5d0f15;
     text-align: center;
-    margin-top: 6%;
 }
 
 #titulo {
@@ -56,19 +54,19 @@ header {
 
 .linha {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto 20px auto;
+    max-width: 90%;
 }
 
 .linha input {
-    width: 40%;
+    width: calc(50% - 15px);
     padding: 13px;
     border-radius: 25px;
     border: none;
     background: #7a1f2b;
     font-size: 15px;
-    margin-left: 65px;
-
 }
 
 .linha-centro input {
@@ -106,10 +104,11 @@ input::placeholder {
     color: aliceblue;
     padding: 15px 32px;
     font-size: 16px;
-    margin-top: 35px;
+    margin-top: 35px; 
     border-radius: 25px;
     cursor: pointer;
     transition: background-color 0.5s;
+    text-decoration: none;
 }
 
 .botao:hover {
@@ -117,15 +116,14 @@ input::placeholder {
 }
 
 main {
-    min-height: calc(100vh - 80px - 60px);
+    min-height: calc(100vh - 100px - 60px);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    padding: 100px 0 60px;
+    align-items: center;
+    padding: 20px 0; 
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
