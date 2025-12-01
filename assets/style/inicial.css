@@ -9,7 +9,6 @@
 
 body {
     background: #f4f4f4;
-
 }
 
 /* HEADER */
@@ -36,7 +35,6 @@ header .usuario i {
 .intro {
     text-align: center;
     margin: 60px 0 10px;
-
 }
 
 .intro h1 {
@@ -48,7 +46,7 @@ header .usuario i {
 .intro p {
     font-size: 1.2rem;
     margin-top: 5px;
-    color:  #302e2e;
+    color: #1a1515;
 }
 
 /* SEARCH BAR */
@@ -74,8 +72,8 @@ header .usuario i {
     border: none;
     outline: none;
     font-size: 1rem;
-    color: #5b1622;
-    background: transparent;
+    color: #ffffff;
+    background-color: #5b1622;
 }
 
 /* CENTER IMAGE */
@@ -109,52 +107,82 @@ header .usuario i {
     padding-bottom: 40px;
 }
 
-/* ITEM CARD */
+/* CARD DO ITEM */
 .item-card {
-    background: white;
-    border-radius: 15px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    transition: 0.2s;
-    padding-bottom: 15px;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .item-card:hover {
-    transform: scale(1.04);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
 }
 
+/* IMAGEM DO CARD */
 .item-card img {
     width: 100%;
-    height: 150px;
+    height: 160px;
     object-fit: cover;
+    border-radius: 14px;
 }
 
+/* TÍTULO DO CARD */
 .item-card h3 {
-    font-size: 1rem;
-    margin: 10px 0 5px;
-    font-weight: 600;
+    font-size: 1.1rem;
+    color: #5b1622;
+    margin-top: 12px;
+    font-weight: 700;
 }
 
 .item-card p {
     font-size: 0.9rem;
-    color: #555;
+    color: #444;
+    margin-top: 6px;
 }
 
-.detalhes-btn {
-    margin-top: 10px;
-    padding: 8px 12px;
+/* BOTÃO */
+.item-card button {
+    margin-top: 14px;
+    width: 85%;
+    padding: 12px 20px;
+
+    background: linear-gradient(135deg, #5b1622, #8b2435);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+
     border: none;
-    background: #5b1622;
-    color: white;
-    border-radius: 8px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 0.95rem;
-    transition: 0.2s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    box-shadow: 0 4px 12px rgba(91, 22, 34, 0.3);
+    transition: all 0.25s ease-in-out;
 }
 
-.detalhes-btn:hover {
-    background: #7a1f2b;
+.item-card button:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 16px rgba(91, 22, 34, 0.45);
+    background: linear-gradient(135deg, #8b2435, #b53148);
+}
+
+.item-card button:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(91, 22, 34, 0.35);
 }
 
 /* MODAL */
@@ -179,55 +207,123 @@ header .usuario i {
     border-radius: 14px;
     text-align: center;
     position: relative;
-    animation: fadeIn 0.25s ease;
 }
 
-.modal-content img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 15px;
-}
-
-.modal-content h2 {
-    margin-bottom: 8px;
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
-.modal-content p {
-    margin: 5px 0;
-    font-size: 1rem;
-    color: #333;
-}
-
-.close {
-    position: absolute;
-    top: 8px;
-    right: 12px;
-    font-size: 28px;
-    cursor: pointer;
-}
-
-/* ANIMAÇÃO */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
+/* RESPONSIVIDADE */
+@media (max-width: 1200px) {
+    .intro h1 {
+        font-size: 3.5rem;
     }
 
-    to {
-        opacity: 1;
-        transform: scale(1);
+    .search-bar {
+        width: 50%;
+    }
+
+    .center-image img {
+        width: 55%;
     }
 }
 
-/* FOOTER */
+@media (max-width: 900px) {
+    header .logo img {
+        height: 80px;
+    }
+
+    header .usuario i {
+        font-size: 32px;
+    }
+
+    .intro h1 {
+        font-size: 3rem;
+    }
+
+    .search-bar {
+        width: 65%;
+    }
+
+    .center-image img {
+        width: 65%;
+    }
+}
+
+@media (max-width: 700px) {
+    .intro {
+        margin: 40px 0 5px;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .search-bar {
+        width: 80%;
+        padding: 10px 14px;
+    }
+
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .center-image img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 80px;
+    }
+
+    header .logo img {
+        height: 70px;
+    }
+
+    header .usuario i {
+        font-size: 28px;
+    }
+
+    .intro h1 {
+        font-size: 2.2rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    .search-bar {
+        width: 90%;
+    }
+
+    .items-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-card img {
+        height: 130px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (max-width: 380px) {
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h1 {
+        font-size: 1.9rem;
+    }
+}
+
 footer {
-    width: 100%;
-    text-align: center;
-    padding: 18px 0;
-    background: #5b1622;
+    background-color: #5b1622;
     color: white;
-    margin-top: 40px;
-    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;          
+    font-size: 15px;
+    width: 100%;
 }
