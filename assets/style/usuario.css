@@ -103,6 +103,7 @@ footer p {
 }
 
 /* RESPONSIVIDADE */
+
 @media (max-width: 600px) {
     .foto-usuario {
         width: 120px;
