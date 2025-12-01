@@ -128,7 +128,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;              /* corresponde à grid-template-rows */
+    height: 60px;
     font-size: 15px;
     width: 100%;
 }
