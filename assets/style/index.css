@@ -65,13 +65,22 @@ main {
 }
 
 /* Títulos */
-#titulo, #login-da-canta {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #333;
+#titulo, #login-da-conta {
+    font-size: 32px;
+    font-weight: 900;
+    color: #5b1622;
+    margin-bottom: 26px;
+    text-align: center;
 }
 
+#criar-conta a {
+    color: #000;
+    text-decoration: none;
+}
+
+#criar-conta a:hover {
+    color: #5b1622 !important;
+}
 
 input {
     padding: 10px;
@@ -80,22 +89,24 @@ input {
     color: white;
     border-radius: 25px;
     border: none;
-    width: 80%;       /* TAMANHO PERFEITO */
-    max-width: 300px; /* NÃO FICA ENORME */
-    display: block;   /* Fica em linha separada */
-    margin: 8px auto; /* Centraliza */
+    width: 80%;
+    max-width: 300px;
+    display: block;
+    margin: 8px auto;
     box-sizing: border-box;
 }
 
-
-.senha {
-    display: flex;
-    justify-content: center;
-    margin: 5px 0;
-}
-
-.senha input {
-    width: 60%;
+/* Botão */
+.botao {
+    background-color: #7a1f2b;
+    color: aliceblue;
+    padding: 10px 25px;
+    font-size: 14px;
+    margin-top: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: none;
 }
 
 /* Botão */
@@ -111,49 +122,13 @@ input {
     border: none;
 }
 
-/* FOOTER */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
     background-color: #5b1622;
     color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 16px;
-    box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
-    z-index: 1000;
-}
-
-/* Botão */
-.botao {
-    background-color: #7a1f2b;
-    color: aliceblue;
-    padding: 10px 25px;
-    font-size: 14px;
-    margin-top: 15px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.5s;
-    border: none;
-}
-
-/* FOOTER */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    justify-content: center;
+    height: 60px;              /* corresponde à grid-template-rows */
+    font-size: 15px;
     width: 100%;
-    height: 60px;
-    background-color: #5b1622;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    box-shadow: 0 -4px 6px rgba(0,0,0,0.3);
-    z-index: 1000;
 }
