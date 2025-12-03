@@ -30,7 +30,7 @@ header {
 
 .foto-container {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .foto-usuario {
@@ -92,9 +92,10 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    margin-top: 40px;
+    /*position: fixed; 
     bottom: 0;
-    left: 0;
+    left: 0;*/
 }
 
 
@@ -110,7 +111,7 @@ footer p {
         height: 120px;
     }
 
-    #Dados {
+    #dados {
         padding: 20px;
     }
 
