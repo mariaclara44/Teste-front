@@ -177,3 +177,204 @@ footer {
         font-size: 14px; /* Ajusta o tamanho do texto no rodapé */
     }
 }
+
+/* ##########################################################################
+   ###########################   RESPONSIVIDADE   ###########################
+   ########################################################################## */
+
+
+/* 📱 CELULARES MUITO PEQUENOS — ATÉ 320px */
+@media (max-width: 320px) {
+    .container {
+        width: calc(100% - 20px);
+        padding: 16px;
+    }
+
+    .container h1 {
+        font-size: 22px;
+    }
+
+    .linha {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .senha input {
+        width: 100%;
+    }
+
+    .botao {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+
+/* 📱 CELULARES PEQUENOS — 321px a 375px */
+@media (min-width: 321px) and (max-width: 375px) {
+    .container {
+        width: calc(100% - 30px);
+        padding: 18px;
+    }
+
+    .container h1 {
+        font-size: 24px;
+    }
+
+    .linha {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .senha input {
+        width: 100%;
+    }
+}
+
+
+/* 📱 CELULARES MÉDIOS — 376px a 414px (iPhone 11/12/13) */
+@media (min-width: 376px) and (max-width: 414px) {
+    .container {
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+
+    .container h1 {
+        font-size: 26px;
+    }
+
+    .linha {
+        flex-direction: column;
+    }
+
+    .senha input {
+        width: 100%;
+    }
+}
+
+
+/* 📱 CELULARES GRANDES — 415px a 480px */
+@media (min-width: 415px) and (max-width: 480px) {
+    .container {
+        width: calc(100% - 50px);
+        padding: 22px;
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .linha {
+        flex-direction: column;
+    }
+}
+
+
+/* 📱 CELULARES MUITO LARGOS / PEQUENOS TABLETS — 481px a 600px */
+@media (min-width: 481px) and (max-width: 600px) {
+    .container {
+        width: calc(100% - 60px);
+        padding: 24px;
+    }
+
+    .container h1 {
+        font-size: 30px;
+    }
+
+    .linha {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .linha input {
+        flex: 1 1 100%;
+    }
+
+    .senha input {
+        width: 100%;
+    }
+}
+
+
+/* 💻 DESKTOP PEQUENO — 601px a 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
+    html, body {
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    body {
+        display: grid;
+        grid-template-rows: 100px 1fr 60px;
+        gap: 0;
+        padding: 0 20px;
+    }
+    
+    .container {
+        width: calc(100% - 40px);
+        margin: 16px auto;
+        padding: 24px;
+        max-height: calc(100vh - 100px - 60px - 40px);
+    }
+
+    .container h1 {
+        font-size: 28px;
+    }
+
+    .linha {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .senha input {
+        width: 100%;
+    }
+
+    .botao {
+        font-size: 18px;
+        padding: 16px 20px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    html, body {
+        height: auto;        /* iPhone SE PRECISA disso */
+        min-height: 100%;    /* garante tamanho total */
+        overflow-y: auto;
+    }
+
+    body {
+        display: flex;               /* troca grid → flex column */
+        flex-direction: column;      /* mantém ordem */
+        min-height: 100vh;           /* evita footer subir */
+    }
+
+    header {
+        flex-shrink: 0;
+    }
+
+    .container {
+        flex: 1;                     /* ocupa o espaço central EXPANDINDO */
+        width: calc(100% - 40px);
+        margin: 20px auto;
+    }
+
+    footer {
+        flex-shrink: 0;              /* fixa no fim da página */
+    }
+
+    .linha {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .senha input {
+        width: 100%;
+    }
+}
