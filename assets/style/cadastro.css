@@ -47,11 +47,11 @@ body {
     align-self: center;
     justify-self: center;
     background: #ffffff;
-    padding: 30px 32px;
+    padding: 20px 32px;
     border-radius: 14px;
     border: 5px solid #5d0f15;
     box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-    max-height: calc(100vh - 100px - 60px - 40px);
+    max-height: calc(100vh - 100px - 60px- 40px);
     overflow: auto;
     text-align: center;
 }
@@ -60,7 +60,7 @@ body {
     font-size: 32px;
     font-weight: 900;
     color: #5b1622;
-    margin-bottom: 26px;
+    margin-bottom: 10px;
 }
 
 .linha {
@@ -131,4 +131,49 @@ footer {
     .container { width: calc(100% - 40px); max-height: none; margin: 24px auto; }
     .linha { flex-direction: column; gap: 12px; }
     .senha input { width: 100%; }
+}
+
+/* Para desktops pequenos */
+@media (min-width: 601px) and (max-width: 1024px) {
+    html, body {
+        height: auto;
+        overflow-y: auto;
+    }
+    
+    body {
+        display: grid;
+        grid-template-rows: 100px 1fr 60px;
+        gap: 0;
+        padding: 0 20px; /* Adiciona um pouco de padding para afastar o conteúdo das bordas */
+    }
+    
+    .container {
+        width: calc(100% - 40px); /* Ajusta o container para 100% da largura menos margens */
+        margin: 16px auto;
+        padding: 24px;
+        max-height: calc(100vh - 100px - 60px - 40px); /* Ajusta a altura máxima do container */
+    }
+
+    .container h1 {
+        font-size: 28px; /* Ajusta o tamanho da fonte para não sobrecarregar a tela */
+    }
+
+    .linha {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap; /* Faz os inputs quebrarem para a linha seguinte, se necessário */
+    }
+
+    .senha input {
+        width: 100%; /* Garante que o campo de senha ocupe toda a largura disponível */
+    }
+
+    .botao {
+        font-size: 18px; /* Ajusta o tamanho do texto do botão */
+        padding: 16px 20px; /* Ajusta o padding do botão */
+    }
+
+    footer {
+        font-size: 14px; /* Ajusta o tamanho do texto no rodapé */
+    }
 }
