@@ -92,18 +92,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
     margin-top: 108px;
-    /*position: fixed; 
-    bottom: 0;
-    left: 0;*/
 }
 
 
 footer p {
     font-size: 15px;
 }
-
-/* RESPONSIVIDADE */
 
 @media (max-width: 600px) {
 
