@@ -42,6 +42,7 @@ header .usuario i {
     color: white;
     cursor: pointer;
     transition: color 0.2s;
+    margin-right: 10px;
 }
 
 header .usuario a:hover i {
