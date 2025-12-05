@@ -23,18 +23,16 @@ body {
 }
 
 header {
-    background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary-color) 100%);
+    background-color: #5b1622;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 25px;
+    padding: 0 15px;
     height: 100px;
-    box-shadow: 0 4px 12px var(--shadow-dark);
-    border-bottom: 2px solid var(--primary-light);
 }
 
 header .logo img {
-    height: 80px;
+    height: 100px;
 }
 
 header .usuario i {
@@ -46,7 +44,7 @@ header .usuario i {
 }
 
 header .usuario a:hover i {
-    color: #ffd700;
+    color: #b0b0b0c7;
 }
 
 .intro {
@@ -128,6 +126,8 @@ header .usuario a:hover i {
 
 .items-grid {
     display: grid;
+    /* Configuração responsiva por padrão: minmax(200px) permite 
+       que o grid se ajuste automaticamente em 3, 4 ou mais colunas */
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 30px;
     padding-bottom: 50px;
@@ -145,7 +145,7 @@ header .usuario a:hover i {
     text-align: center;
 
     box-shadow: 0 8px 18px var(--shadow-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação */
 }
 
 .item-card:hover {
@@ -195,7 +195,7 @@ header .usuario a:hover i {
     gap: 8px;
 
     box-shadow: 0 6px 15px rgba(91, 22, 34, 0.4);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Animação */
 }
 
 .item-card button:hover {
@@ -231,7 +231,7 @@ header .usuario a:hover i {
     text-align: left;
     position: relative;
     box-shadow: 0 20px 40px var(--shadow-dark);
-    animation: fadeIn 0.3s ease-out;
+    animation: fadeIn 0.3s ease-out; /* Animação */
 }
 
 @keyframes fadeIn {
@@ -289,24 +289,31 @@ header .usuario a:hover i {
     border-left: 3px solid var(--primary-light);
 }
 
+/* ------------------------------------------------------------------
+   RESPONSIVIDADE: Notebooks/Tablets Grandes (max-width: 1200px)
+   ------------------------------------------------------------------ */
 @media (max-width: 1200px) {
     .intro h1 {
         font-size: 3.5rem;
     }
 
     .search-bar {
-        width: 55%;
+        width: 55%; /* Aumenta a largura da barra de busca */
     }
 
     .center-image img {
-        width: 45%;
+        width: 45%; /* Aumenta a largura da imagem central */
     }
 
     .items-grid {
+        /* Permite que as colunas sejam ligeiramente menores */
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     }
 }
 
+/* ------------------------------------------------------------------
+   RESPONSIVIDADE: Tablets (max-width: 900px)
+   ------------------------------------------------------------------ */
 @media (max-width: 900px) {
     header {
         height: 80px;
@@ -326,7 +333,7 @@ header .usuario a:hover i {
     }
 
     .search-bar {
-        width: 70%;
+        width: 70%; /* Aumenta mais a largura */
         padding: 12px 18px;
     }
 
@@ -335,6 +342,9 @@ header .usuario a:hover i {
     }
 }
 
+/* ------------------------------------------------------------------
+   RESPONSIVIDADE: Celulares Grandes (max-width: 600px)
+   ------------------------------------------------------------------ */
 @media (max-width: 600px) {
     header {
         height: 70px;
@@ -361,7 +371,7 @@ header .usuario a:hover i {
     }
 
     .search-bar {
-        width: 90%;
+        width: 90%; /* Quase largura total */
         padding: 10px 14px;
     }
 
@@ -370,6 +380,7 @@ header .usuario a:hover i {
     }
 
     .items-grid {
+        /* Permite colunas de 140px */
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
         gap: 15px;
     }
@@ -379,7 +390,7 @@ header .usuario a:hover i {
     }
 
     .modal-content {
-        width: 95%;
+        width: 95%; /* Modal preenche quase toda a tela */
         padding: 25px;
     }
 
@@ -390,12 +401,16 @@ header .usuario a:hover i {
     }
 }
 
+/* ------------------------------------------------------------------
+   RESPONSIVIDADE: Celulares Pequenos (max-width: 450px)
+   ------------------------------------------------------------------ */
 @media (max-width: 450px) {
     .intro h1 {
         font-size: 2rem;
     }
 
     .items-grid {
+        /* Força 2 colunas para melhor visualização em celulares */
         grid-template-columns: repeat(2, 1fr);
     }
 
