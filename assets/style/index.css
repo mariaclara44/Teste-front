@@ -48,7 +48,7 @@ main {
 }
 
 .container, main section {
-  width: 35%;
+  width: 25%;
   padding: 20px;
   border: 5px solid #5d0f15;
   margin: 0 auto;
