@@ -42,7 +42,7 @@ O **Lost&Found** é uma plataforma web que visa organizar itens perdidos e encon
 - **Edição e Remoção**: Itens podem ser editados ou removidos caso necessário.
 - **Listagem de Itens**: O sistema deve exibir todos os itens com a opção de filtragem.
 - **Validações**: Validação obrigatória dos campos de formulário como descrição, categoria e localização.
-  
+
 ### Não Funcionais
 - **Segurança**: Proteção de dados sensíveis e autenticação adequada para usuários/admins.
 - **Performance**: A listagem de itens deve ser rápida e eficiente, mesmo com um grande volume de registros.
@@ -52,12 +52,33 @@ O **Lost&Found** é uma plataforma web que visa organizar itens perdidos e encon
 
 ## Regras de Negócio
 
-1. **Cadastro Mínimo de Itens**: O sistema deve permitir pelo menos 100 itens registrados.
-2. **Filtros de Pesquisa**: Permitir que os usuários filtrem itens por **categoria**, **data** e **localização**.
-3. **Validações Obrigatórias**: Todos os campos de cadastro de itens (descrição, categoria e localização) são obrigatórios.
-4. **Prazo de Guarda**: Itens encontrados devem ser mantidos por no máximo 45 dias letivos. Após esse período, itens como uniformes e roupas serão doados; livros didáticos serão incorporados à biblioteca; eletrônicos de baixo valor serão doados ou descartados; jóias serão enviadas para tratamento especializado.
-5. **Prioridade de Devolução**: Itens com identificação (etiquetas ou nome) têm prioridade na devolução.
-6. **Registro de Achados**: Todo item encontrado deve ser registrado no sistema **Lost&Found** em até **24 horas úteis**.
+1. **Busca de Itens Perdidos**:  
+   O sistema oferece a função de busca de itens perdidos por **ID** e **categoria**.
+
+2. **Acompanhamento do Status do Objeto**:  
+   O sistema permite que os usuários acompanhem o status dos itens, com as situações **‘Perdido’** e **‘Encontrado’**.
+
+3. **Prazo de Guarda**:  
+   Itens encontrados e não procurados serão mantidos pelo setor de achados e perdidos por um período máximo de **45 dias letivos**.
+
+4. **Destino Final**:  
+   Após o prazo de guarda:
+   - **Uniformes e roupas** serão doados.
+   - **Livros didáticos** serão incorporados à biblioteca.
+   - **Eletrônicos de baixo valor** serão doados ou descartados.
+   - **Objetos como jóias** serão enviados para um local especializado para dar o devido tratamento ao item.
+
+5. **Prioridade de Devolução**:  
+   Itens com **identificação** (etiquetas ou nome escrito) têm prioridade no **contato** e **devolução**.
+
+6. **Registro de Achados**:  
+   Todo item entregue a algum funcionário deve ser registrado no **Lost&Found** em até **24 horas úteis**.
+
+7. **Cadastro Mínimo de Itens**:  
+   O sistema deve permitir o cadastro de pelo menos **100 itens** registrados.
+
+8. **Validações Obrigatórias**:  
+   Todos os campos de cadastro de itens (descrição, categoria, localização) devem ser **obrigatoriamente preenchidos**.
 
 ---
 
@@ -89,3 +110,4 @@ O **Lost&Found** é uma plataforma web que visa organizar itens perdidos e encon
   
 ### 3. **Instalação das Dependências**
 No diretório raiz do projeto, execute o comando para instalar as dependências:
+
