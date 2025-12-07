@@ -9,6 +9,7 @@ body {
     background-color: #ffffff;
 }
 
+/* Header padrão */
 header {
     background-color: #5b1622;
     display: flex;
@@ -28,33 +29,38 @@ header {
     margin-right: 30px;
 }
 
+/* Foto do Usuário*/
+
 .foto-container {
     text-align: center;
     margin-top: 10px;
 }
 
+/* Moldura da foto para deixar redonda*/
 .foto-usuario {
     width: 150px;
     height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
+    object-fit: cover; /*Ajuda a não distorcer a foto */
+    border-radius: 50%; /*foto circular */
     border: 6px solid #5b1622; 
 }
 
+/* Nome do Usuário */
 .nome-usuario {
     margin-top: 15px;
     font-size: 22px;
     font-weight: 600;
 }
 
+/* Caixa que contem os dados do Usuário */
 #dados {
     width: 90%;
     max-width: 500px;
     margin: 40px auto;
     background-color: #dddddd;
     padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 25px;  /* Arredonda o card */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Traz uma sombra suave */
 }
 
 #dados h3 {
@@ -84,6 +90,8 @@ header {
     margin-right: 8px;
 }
 
+/* Footer padronizada*/
+
 footer {
     width: 100%;
     height: 60px;
@@ -93,7 +101,9 @@ footer {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    /*position: fixed; 
+
+    /* Caso a footer fosse fixa */
+    position: fixed; 
     bottom: 0;
     left: 0;*/
 }
