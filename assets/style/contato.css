@@ -102,9 +102,9 @@ footer {
     width: 100%;
 }
 
-/* ------------------------ */
+
 /* 📱 CELULARES — até 767px */
-/* ------------------------ */
+
 @media (max-width: 767px) {
 
     header {
@@ -147,10 +147,8 @@ footer {
 }
 
 
-
-/* ---------------------------------------- */
 /* 📱➡️💻 TABLETS / IPAD — 768 a 1024px */
-/* ---------------------------------------- */
+
 @media (min-width: 768px) and (max-width: 1024px) {
 
     header {
@@ -185,10 +183,8 @@ footer {
 }
 
 
-
-/* ---------------------------------------- */
 /* 🖥️ DESKTOP MENOR — 1025 a 1280px */
-/* ---------------------------------------- */
+
 @media (min-width: 1025px) and (max-width: 1280px) {
 
     header {
@@ -229,7 +225,7 @@ footer {
     }
 }
 
-/* --------- CELULAR (até 480px) ---------- */
+/*  CELULAR (até 480px) */
 @media (max-width: 480px) {
 
     main {
@@ -246,7 +242,7 @@ footer {
 }
 
 
-/* --------- CELULAR GRANDE (481–767px) ---------- */
+/*  CELULAR GRANDE (481–767px) */
 @media (min-width: 481px) and (max-width: 767px) {
 
     main {
@@ -263,7 +259,7 @@ footer {
 }
 
 
-/* --------- IPAD / TABLETS (768–1024px) ---------- */
+/* IPAD / TABLETS (768–1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
 
     main {
@@ -280,7 +276,7 @@ footer {
 }
 
 
-/* --------- NEST HUB E TELAS ALTAS (altura ≥ 900px) ---------- */
+/* NEST HUB E TELAS ALTAS (altura ≥ 900px)*/
 @media (min-height: 900px) {
 
     main {
