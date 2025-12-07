@@ -130,3 +130,179 @@ footer p {
         margin-top: 10px;
     }
 }
+
+
+/* CELULARES ATÉ 600PX   */
+
+@media (max-width: 600px) {
+
+    header {
+        height: 70px;
+        padding: 0 10px;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .home-btn i {
+        font-size: 26px;
+        margin-right: 20px;
+    }
+
+    .foto-container {
+        margin-top: 60px;
+    }
+
+    .foto-usuario {
+        width: 120px;
+        height: 120px;
+    }
+
+    #dados {
+        width: 95%;
+        padding: 20px;
+    }
+
+    #dados h3 {
+        font-size: 26px;
+    }
+
+    #dados p {
+        font-size: 15px;
+    }
+
+    footer {
+        margin-top: 60px;
+        height: 55px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+}
+
+/* CELULARES MUITO PEQUENOS (iPhone SE) */
+
+@media (max-width: 380px) {
+
+    header {
+        height: 60px;
+        padding: 0 8px;
+    }
+
+    .logo {
+        height: 55px;
+    }
+
+    .home-btn i {
+        font-size: 22px;
+        margin-right: 10px;
+    }
+
+    .foto-container {
+        margin-top: 40px;
+    }
+
+    .foto-usuario {
+        width: 100px;
+        height: 100px;
+    }
+
+    #dados {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #dados h3 {
+        font-size: 22px;
+    }
+
+    footer {
+        margin-top: 40px;
+        height: 50px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+
+/* TABLETS (600 — 900PX)      */
+
+@media (min-width: 600px) and (max-width: 900px) {
+
+    header {
+        height: 85px;
+    }
+
+    .logo {
+        height: 85px;
+    }
+
+    .foto-usuario {
+        width: 140px;
+        height: 140px;
+    }
+
+    #dados {
+        max-width: 550px;
+    }
+}
+
+
+/*  COMPUTADOR (TELAS GRANDES ACIMA DE 1200PX) */
+
+@media (min-width: 1200px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    #dados {
+        max-width: 600px;
+    }
+
+    footer {
+        width: 100%;
+        max-width: 1200px;
+    }
+}
+
+/* Celulares grandes (de 600px até 850px de altura) */
+@media (min-height: 700px) and (max-width: 600px) {
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: auto; /* empurra pro final */
+    }
+}
+
+/* Celulares grandes e tablets (altura grande = footer voando) */
+@media (min-height: 700px) {
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: auto !important; /* fixa no final da tela */
+    }
+}
+
+

@@ -289,9 +289,8 @@ header .usuario a:hover i {
     border-left: 3px solid var(--primary-light);
 }
 
-/* ------------------------------------------------------------------
-   RESPONSIVIDADE: Notebooks/Tablets Grandes (max-width: 1200px)
-   ------------------------------------------------------------------ */
+/* RESPONSIVIDADE: Notebooks/Tablets Grandes (max-width: 1200px) */
+
 @media (max-width: 1200px) {
     .intro h1 {
         font-size: 3.5rem;
@@ -311,9 +310,8 @@ header .usuario a:hover i {
     }
 }
 
-/* ------------------------------------------------------------------
-   RESPONSIVIDADE: Tablets (max-width: 900px)
-   ------------------------------------------------------------------ */
+/* RESPONSIVIDADE: Tablets (max-width: 900px) */
+
 @media (max-width: 900px) {
     header {
         height: 80px;
@@ -342,9 +340,7 @@ header .usuario a:hover i {
     }
 }
 
-/* ------------------------------------------------------------------
-   RESPONSIVIDADE: Celulares Grandes (max-width: 600px)
-   ------------------------------------------------------------------ */
+/* RESPONSIVIDADE: Celulares Grandes (max-width: 600px) */
 @media (max-width: 600px) {
     header {
         height: 70px;
@@ -401,9 +397,7 @@ header .usuario a:hover i {
     }
 }
 
-/* ------------------------------------------------------------------
-   RESPONSIVIDADE: Celulares Pequenos (max-width: 450px)
-   ------------------------------------------------------------------ */
+/* RESPONSIVIDADE: Celulares Pequenos (max-width: 450px) */
 @media (max-width: 450px) {
     .intro h1 {
         font-size: 2rem;

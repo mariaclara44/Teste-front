@@ -109,10 +109,130 @@ footer {
     width: 100%;
 }
 
-@media (max-width: 600px) {
-    html, body { height: auto; overflow-y: auto; }
-    body { display: block; } 
-    .container { width: calc(100% - 40px); max-height: none; margin: 24px auto; }
-    .linha { flex-direction: column; gap: 12px; }
-    .senha input { width: 100%; }
+/* ----------------------------- */
+/*  CELULARES PEQUENOS (até 360) */
+/* ----------------------------- */
+@media (max-width: 360px) {
+
+    header {
+        height: 70px;
+        padding: 0 10px;
+    }
+
+    .logo {
+        height: 70px;
+    }
+
+    .config {
+        font-size: 30px;
+        margin-right: 10px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .linha {
+        flex-direction: column;
+    }
 }
+
+
+/* ---------------------------------------- */
+/*  CELULARES MÉDIOS (361 até 480px wide)   */
+/* ---------------------------------------- */
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+        padding: 22px;
+    }
+
+    .linha {
+        flex-direction: column;
+    }
+}
+
+
+/* ---------------------------------------- */
+/*  CELULARES GRANDES / SMARTPHONES GRANDES */
+/* ---------------------------------------- */
+@media (max-width: 600px) {
+
+    header {
+        height: 80px;
+    }
+
+    .logo {
+        height: 80px;
+    }
+
+    .config {
+        font-size: 34px;
+    }
+
+    .container {
+        width: 90%;
+        max-height: calc(100vh - 80px - 60px - 20px);
+    }
+}
+
+
+/* ----------------------------- */
+/*  TABLETS PEQUENOS (600–768)   */
+/* ----------------------------- */
+@media (min-width: 600px) and (max-width: 768px) {
+
+    .container {
+        width: 85%;
+        max-width: 600px;
+    }
+}
+
+
+/* ----------------------------- */
+/*  iPAD / TABLETS GRANDES       */
+/* ----------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    header {
+        height: 90px;
+    }
+
+    .logo {
+        height: 90px;
+    }
+
+    .container {
+        width: 80%;
+        max-width: 650px;
+    }
+}
+
+
+/* ---------------------------------------- */
+/*  NEST HUB / TELAS LARGAS E BAIXAS (1024×600) */
+/* ---------------------------------------- */
+@media (max-width: 1024px) and (max-height: 650px) {
+
+    header {
+        height: 75px;
+    }
+
+    .logo {
+        height: 75px;
+    }
+
+    .config {
+        font-size: 32px;
+    }
+
+    .container {
+        margin-top: 20px;
+        width: 80%;
+        max-width: 600px;
+        max-height: calc(100vh - 75px - 60px - 10px);
+    }
+}
+

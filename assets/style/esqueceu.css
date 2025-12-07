@@ -147,3 +147,126 @@ footer {
     font-size: 15px;
     width: 100%;
 }
+
+/* RESPONSIVIDADE CELULAR */
+
+/* Telas até 1024px (tablets e notebooks pequenos) */
+@media (max-width: 1024px) {
+  .container, main section {
+    width: 40%;
+  }
+
+  #titulo, #login-da-conta {
+    font-size: 28px;
+  }
+
+  input, .botao {
+    width: 85%;
+  }
+}
+
+/* Telas até 768px (tablets em pé / celulares grandes) */
+@media (max-width: 768px) {
+  header {
+    padding: 0 10px;
+  }
+
+  .container, main section {
+    width: 60%;
+    padding: 18px;
+  }
+
+  #titulo, #login-da-conta {
+    font-size: 26px;
+  }
+
+  input {
+    max-width: 280px;
+  }
+
+  .botao {
+    width: 75%;
+  }
+}
+
+/* Telas até 480px (CELULAR PADRÃO) */
+@media (max-width: 480px) {
+
+  header {
+    height: 80px;
+  }
+
+  .logo {
+    height: 80px;
+  }
+
+  main {
+    height: calc(100vh - 80px - 60px);
+  }
+
+  .container, main section {
+    width: 85%;
+    padding: 15px;
+  }
+
+  #titulo, #login-da-conta {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  input {
+    width: 90%;
+    max-width: 250px;
+    font-size: 13px;
+  }
+
+  .botao {
+    width: 90%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .lembrar {
+    width: 90%;
+    font-size: 11px;
+  }
+
+  .lembrar input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Telas MUITO pequenas (360px ou menores) */
+@media (max-width: 360px) {
+
+  .container, main section {
+    width: 92%;
+    padding: 12px;
+  }
+
+  #titulo, #login-da-conta {
+    font-size: 20px;
+  }
+
+  input {
+    max-width: 220px;
+  }
+
+  .botao {
+    width: 95%;
+    font-size: 12px;
+  }
+
+  .lembrar {
+    font-size: 10px;
+  }
+}
+
+
+
+
