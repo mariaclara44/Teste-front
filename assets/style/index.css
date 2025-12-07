@@ -8,8 +8,8 @@ html, body {
     height: 100vh; 
     font-family: 'Inter', sans-serif;
     background-color: #7a1f2b;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-x: hidden; /* Evita rolagem horizontal */ 
+    overflow-y: hidden; /* Impede rolagem vertical */
 }
 
 header {
@@ -21,16 +21,17 @@ header {
     height: 100px;
 }
 
+/* Icone de configuração com animação */
 .config {
     font-size: 40px;
     color: white;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s; /* Anima ao passar o mouse */
     margin-right: 20px;
 }
 
 .config:hover {
-    transform: rotate(30deg);
+    transform: rotate(30deg); /* Pequena rotação  */
 }
 
 .logo {
@@ -42,20 +43,20 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  overflow-y: auto;
-  box-sizing: border-box;
+  overflow-y: auto; /* Permite rolarsó dentro do conteúdo */
 }
 
+/* CONTAINER CENTRAL*/
+/* Mesma estilização para .container e section */
 .container, main section {
   width: 25%;
   padding: 20px;
   border: 5px solid #5d0f15;
   margin: 0 auto;
-  background: #ffffff;
-  border-radius: 20px;
+  background: white;
+  border-radius: 20px; /* Arredonda o card */
   text-align: center;
-  max-width: 90%;
+  max-width: 90%; /* Evita quebrar em telas pequenas */
   box-sizing: border-box;
 }
 
@@ -67,6 +68,7 @@ main {
     text-align: center;
 }
 
+/* Link para criar conta*/
 #criar-conta a {
     color: #000;
     text-decoration: none;
@@ -86,12 +88,13 @@ main {
     color: #5b1622;
 }
 
+/* Input para o formulário */
 input {
     padding: 10px;
     font-size: 14px;
-    background: #7a1f2b;
+    background: #7a1f2b; /* Deixa com um fundo escuro */
     color: white;
-    border-radius: 25px;
+    border-radius: 25px; /* Bordas arredondadas */
     border: none;
     width: 80%;
     max-width: 300px;
@@ -100,25 +103,6 @@ input {
     box-sizing: border-box;
 }
 
-input:focus {
-    background: #7a1f2b; 
-    outline: none; 
-}
-
-.botao {
-    background-color: #7a1f2b;
-    color: aliceblue;
-    padding: 10px 25px;
-    font-size: 14px;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background-color 0.5s;
-    border: none;
-    text-decoration: none;
-    width: 200px; /* Definindo a largura diretamente */
-}
 
 
 .lembrar {
@@ -143,8 +127,11 @@ input:focus {
 
 .lembrar label {
     cursor: pointer;
+    transition: background-color 0.5s; /* Suavisa mudança de cor */
+    border: none;
 }
 
+/* Footer */
 footer {
     background-color: #5b1622;
     color: white;
