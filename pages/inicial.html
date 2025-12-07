@@ -24,7 +24,7 @@
     <div class="logo">
       <img src="/assets/img/lostandfound.png" alt="Logo">
     </div>
-
+    
     <div class="usuario">
       <a href="usuario.html">
         <i class="fa-solid fa-circle-user"></i>
@@ -43,7 +43,7 @@
 
       <div class="search-bar">
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Perdeu? Busque aqui" />
+        <input id="inputBusca" type="text" placeholder="Perdeu? Busque aqui" />
       </div>
     </section>
 
@@ -57,12 +57,7 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Lost & Found — Todos os direitos reservados.</p>
-  </footer>
-
-  <!-- MODAL DE DETALHES -->
+  <!-- MODAL -->
   <div id="itemModal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -73,23 +68,15 @@
       <p id="modalLocation"></p>
       <p id="modalDescription"></p>
       <p id="modalStatus"></p>
+      <p id="modalCategory"></p>
     </div>
   </div>
 
-  <div id="itemModal">
-    <div class="modal-content">
+  <footer>
+    <p>© 2025 Lost & Found — Todos os direitos reservados.</p>
+  </footer>
 
-      <span class="close">&times;</span>
-
-      <img src="" alt="Imagem do item">
-
-      <h2></h2>
-
-      <p class="modal-location"></p>
-      <p class="modal-status"></p>
-
-    </div>
-  </div>
+  <!-- SCRIPT -->
   <script src="../scripts/itensbackup.js"></script>
 
 </body>

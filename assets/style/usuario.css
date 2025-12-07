@@ -33,7 +33,7 @@ header {
 
 .foto-container {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 100px;
 }
 
 /* Moldura da foto para deixar redonda*/
@@ -115,19 +115,3 @@ footer p {
     font-size: 15px;
 }
 
-/* RESPONSIVIDADE */
-
-@media (max-width: 600px) {
-    .foto-usuario {
-        width: 120px;
-        height: 120px;
-    }
-
-    #dados {
-        padding: 20px;
-    }
-
-    header {
-        height: 75px;
-    }
-}

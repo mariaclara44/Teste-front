@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap');
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
-  height: 100vh; /* garante altura total da tela */      
+  height: 100vh;
   width: 100%;
   font-family: 'Inter', sans-serif;
   background-color: #7a1f2b;
-  overflow: hidden; /* impede rolagem fora da área do container */     
+  overflow: hidden; /* impede rolagem fora do container */  
 }
 
 header {
@@ -27,12 +23,12 @@ header {
     font-size: 40px;
     color: white;
     cursor: pointer;
-    transition: transform 0.3s; /* animação ao passar o mouse */
+    transition: transform 0.3s;
     margin-right: 20px;
 }
 
 .config:hover {
-    transform: rotate(30deg); /* giro decorativo */
+    transform: rotate(30deg);
 }
 
 .logo {
@@ -47,15 +43,15 @@ body {
 
 .container {
     width: 720px;          
-    max-width: 90%; /* evita estourar em telas pequenas */
+    max-width: 90%;
     align-self: center;
     justify-self: center;
     background: #ffffff;
-    padding: 20px 32px;
+    padding: 30px 32px;
     border-radius: 14px;
     border: 5px solid #5d0f15;
     box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-    max-height: calc(100vh - 100px - 60px- 40px); /* Cálculo incomum: limita a altura conforme header e footer */
+    max-height: calc(100vh - 100px - 60px - 40px); /* cálculo da altura considerando header e footer */
     overflow: auto;
     text-align: center;
 }
@@ -64,7 +60,7 @@ body {
     font-size: 32px;
     font-weight: 900;
     color: #5b1622;
-    margin-bottom: 10px;
+    margin-bottom: 26px;
 }
 
 .linha {
@@ -75,23 +71,7 @@ body {
 
 .linha input {
     flex: 1;
-    min-width: 0; /* Evita quebra em flex */    
-    padding: 13px 16px;
-    border-radius: 25px;
-    border: none;
-    background: #7a1f2b;
-    color: #fff;
-    font-size: 15px;
-}
-
-.senha {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 18px;
-}
-
-.senha input {
-    width: 70%;
+    min-width: 0;           
     padding: 13px 16px;
     border-radius: 25px;
     border: none;
@@ -101,7 +81,7 @@ body {
 }
 
 .botao {
-    display: inline-block;
+    display: inline-block; /* permite controlar largura/altura como block, mas sem quebrar a linha como inline */
     width: 100%;
     padding: 14px 18px;
     border-radius: 25px;
@@ -130,7 +110,9 @@ footer {
 }
 
 
-/*  CELULARES PEQUENOS (até 360) */
+/* RESPONSIVIDADE */
+
+/* CELULARES PEQUENOS (até 360) */
 
 @media (max-width: 360px) {
 
@@ -159,7 +141,7 @@ footer {
 }
 
 
-/*  CELULARES MÉDIOS (361 até 480px wide)   */
+/* CELULARES MÉDIOS (361 até 480px wide)  */
 
 @media (max-width: 480px) {
 
@@ -196,8 +178,7 @@ footer {
     }
 }
 
-
-/*  TABLETS PEQUENOS (600–768)   */
+/* TABLETS PEQUENOS (600–768)  */
 
 @media (min-width: 600px) and (max-width: 768px) {
 
@@ -207,8 +188,7 @@ footer {
     }
 }
 
-
-/*  iPAD / TABLETS GRANDES       */
+/* iPAD / TABLETS GRANDES */
 
 @media (min-width: 768px) and (max-width: 1024px) {
 

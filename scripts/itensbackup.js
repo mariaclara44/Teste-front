@@ -1,6 +1,6 @@
 const BASE_URL = "http://localhost:3001";
 
-const inputBusca = document.querySelector(".search-bar input");
+const inputBusca = document.getElementById("inputBusca");
 const grid = document.getElementById("recentItemsGrid");
 const modal = document.getElementById("itemModal");
 const closeBtn = document.querySelector(".close");
@@ -12,30 +12,52 @@ const modalDescription = document.getElementById("modalDescription");
 const modalStatus = document.getElementById("modalStatus");
 const modalCategory = document.getElementById("modalCategory");
 
+let allItems = [];
+
 carregarRecentes();
 
 inputBusca.addEventListener("input", () => {
-  const nome = inputBusca.value.trim();
-  nome === "" ? carregarRecentes() : buscarPorNome(nome);
+  const valor = inputBusca.value.trim().toLowerCase();
+
+  if (valor === "") {
+    mostrarItens(allItems);
+    return;
+  }
+
+  const filtrados = allItems.filter(
+    (item) =>
+      item.title?.toLowerCase().includes(valor) ||
+      item.category?.toLowerCase().includes(valor) ||
+      item.location?.toLowerCase().includes(valor)
+  );
+
+  mostrarItens(filtrados);
 });
 
-async function buscarPorNome(nome) {
-  try {
-    const res = await fetch(`${BASE_URL}/itens?title=${encodeURIComponent(nome)}`);
-    const data = await res.json();
-    mostrarItens(data.items);
-  } catch {
-    grid.innerHTML = "<p>Erro ao buscar itens.</p>";
-  }
-}
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) modal.style.display = "none";
+});
 
 async function carregarRecentes() {
   try {
     const res = await fetch(`${BASE_URL}/itens`);
+
+    if (!res.ok) {
+      throw new Error(`Erro HTTP! Status: ${res.status}`);
+    }
+
     const data = await res.json();
-    mostrarItens(data.items);
-  } catch {
-    grid.innerHTML = "<p>Erro ao carregar itens.</p>";
+
+    allItems = data.items || data;
+
+    mostrarItens(allItems);
+  } catch (error) {
+    console.error("Erro ao carregar itens:", error);
+    grid.innerHTML = `<p class="error-message">Não foi possível carregar os itens. Verifique se o servidor (${BASE_URL}) está ativo.</p>`;
   }
 }
 
@@ -52,15 +74,17 @@ function mostrarItens(lista) {
     card.classList.add("item-card");
 
     card.innerHTML = `
-      <img src="${item.imageUrl}" alt="${item.title}">
-      <h3>${item.title}</h3>
-      <p>${item.location}</p>
-      <button class="detalhes-btn" data-id="${item.id}">Ver detalhes</button>
+      <img src="${item.imageUrl || ""}" alt="${
+      item.title || "Item sem título"
+    }">
+      <h3>${item.title || "Item sem título"}</h3>
+      <p>${item.location || "Local não informado"}</p>
+      <button class="detalhes-btn">Ver detalhes</button>
     `;
 
-    card.querySelector(".detalhes-btn").addEventListener("click", () => {
-      abrirModal(item);
-    });
+    card
+      .querySelector("button")
+      .addEventListener("click", () => abrirModal(item));
 
     grid.appendChild(card);
   });
@@ -68,18 +92,14 @@ function mostrarItens(lista) {
 
 function abrirModal(item) {
   modalImg.src = item.imageUrl || "";
-  modalTitle.textContent = item.title || "Indisponível";
-  modalDescription.textContent = "Descrição: " + (item.description || "N/A");
+  modalImg.alt = item.title || "Imagem do item";
+
+  modalTitle.textContent = item.title || "Sem título";
+
+  modalCategory.textContent = "Categoria: " + (item.category || "N/A");
   modalLocation.textContent = "Local: " + (item.location || "N/A");
   modalStatus.textContent = "Status: " + (item.status || "N/A");
-  if (modalCategory) modalCategory.textContent = "Categoria: " + (item.category || "N/A");
+  modalDescription.textContent = "Descrição: " + (item.description || "N/A");
+
   modal.style.display = "flex";
 }
-
-closeBtn.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-
-window.addEventListener("click", (e) => {
-  if (e.target === modal) modal.style.display = "none";
-});

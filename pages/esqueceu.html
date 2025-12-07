@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Teste</title>
-    <link rel="stylesheet" href="./assets/style/index.css" />
+    <link rel="stylesheet" href="/assets/style/esqueceu.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,9 +18,8 @@
   </head>
   <body>
     <header>
-      <img src="./assets/img/lostandfound.png" class="logo" alt="Logo" />
+      <img src="/assets/img/lostandfound.png" class="logo" alt="Logo" />
 
-      <!-- Adiciona o icone de engrenagem dentro da header -->
       <div class="config">
         <i class="fa-solid fa-gear config"></i>
       </div>
@@ -28,16 +27,16 @@
 
     <main>
       <section>
-        <h4 id="login-da-conta">Login</h4>
+        <h4 id="redefinir-senha">Redefinir senha</h4>
         <form action="../index.html" method="get">
           <div class="formulario">
-            <div class="email">
-              <label for="email"></label>
+            <div class="nova-senha">
+              <label for="nova-senha"></label>
               <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Digite seu e-mail..."
+                type="nova-senha"
+                name="nova-senha"
+                id="nova-senha"
+                placeholder="Digite sua nova senha..."
                 required
               />
             </div>
@@ -48,27 +47,19 @@
                 type="password"
                 name="senha"
                 id="senha"
-                placeholder="Digite sua senha..."
+                placeholder="Digite a senha novamente..."
                 required
               />
             </div>
           </div>
 
-          <div class="lembrar">
-            <input type="checkbox" id="lembrar" name="lembrar">
-            <label for="lembrar">Lembrar de mim</label>
-          </div>
-
-          <a href="./pages/inicial.html" class="botao">Entrar</a>
+          <button class="botao" type="submit">Entrar</button>
         </form>
 
         <h6 id="criar-conta">
-          <a href="./pages/cadastro.html">Não tem conta? Cadastre-se </a>
+          <a href="/pages/cadastro.html">Não tem conta? Cadastre-se </a>
         </h6>
-        <h6 id="esqueceu-senha">
-          <a href="./pages/esqueceu.html">Esqueceu sua senha?</a>
-        </h6>
-
+        
       </section>
     </main>
     <footer>
