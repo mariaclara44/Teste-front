@@ -3,11 +3,11 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body {
-  height: 100vh;        
+  height: 100vh;
   width: 100%;
   font-family: 'Inter', sans-serif;
   background-color: #7a1f2b;
-  overflow: hidden;      
+  overflow: hidden; /* impede rolagem fora do container */  
 }
 
 header {
@@ -51,7 +51,7 @@ body {
     border-radius: 14px;
     border: 5px solid #5d0f15;
     box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-    max-height: calc(100vh - 100px - 60px - 40px);
+    max-height: calc(100vh - 100px - 60px - 40px); /* cálculo da altura considerando header e footer */
     overflow: auto;
     text-align: center;
 }
@@ -81,7 +81,7 @@ body {
 }
 
 .botao {
-    display: inline-block;
+    display: inline-block; /* permite controlar largura/altura como block, mas sem quebrar a linha como inline */
     width: 100%;
     padding: 14px 18px;
     border-radius: 25px;
@@ -109,9 +109,11 @@ footer {
     width: 100%;
 }
 
-/* ----------------------------- */
-/*  CELULARES PEQUENOS (até 360) */
-/* ----------------------------- */
+
+/* RESPONSIVIDADE */
+
+/* CELULARES PEQUENOS (até 360) */
+
 @media (max-width: 360px) {
 
     header {
@@ -139,9 +141,8 @@ footer {
 }
 
 
-/* ---------------------------------------- */
-/*  CELULARES MÉDIOS (361 até 480px wide)   */
-/* ---------------------------------------- */
+/* CELULARES MÉDIOS (361 até 480px wide)  */
+
 @media (max-width: 480px) {
 
     .container {
@@ -155,9 +156,8 @@ footer {
 }
 
 
-/* ---------------------------------------- */
 /*  CELULARES GRANDES / SMARTPHONES GRANDES */
-/* ---------------------------------------- */
+
 @media (max-width: 600px) {
 
     header {
@@ -178,10 +178,8 @@ footer {
     }
 }
 
+/* TABLETS PEQUENOS (600–768)  */
 
-/* ----------------------------- */
-/*  TABLETS PEQUENOS (600–768)   */
-/* ----------------------------- */
 @media (min-width: 600px) and (max-width: 768px) {
 
     .container {
@@ -190,10 +188,8 @@ footer {
     }
 }
 
+/* iPAD / TABLETS GRANDES */
 
-/* ----------------------------- */
-/*  iPAD / TABLETS GRANDES       */
-/* ----------------------------- */
 @media (min-width: 768px) and (max-width: 1024px) {
 
     header {
@@ -211,9 +207,8 @@ footer {
 }
 
 
-/* ---------------------------------------- */
 /*  NEST HUB / TELAS LARGAS E BAIXAS (1024×600) */
-/* ---------------------------------------- */
+
 @media (max-width: 1024px) and (max-height: 650px) {
 
     header {

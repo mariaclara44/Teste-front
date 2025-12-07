@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap');
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 html, body {
-  height: 100vh;        
+  height: 100vh; /* garante altura total da tela */      
   width: 100%;
   font-family: 'Inter', sans-serif;
   background-color: #7a1f2b;
-  overflow: hidden;      
+  overflow: hidden; /* impede rolagem fora da área do container */     
 }
 
 header {
@@ -23,12 +27,12 @@ header {
     font-size: 40px;
     color: white;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s; /* animação ao passar o mouse */
     margin-right: 20px;
 }
 
 .config:hover {
-    transform: rotate(30deg);
+    transform: rotate(30deg); /* giro decorativo */
 }
 
 .logo {
@@ -43,7 +47,7 @@ body {
 
 .container {
     width: 720px;          
-    max-width: 90%;
+    max-width: 90%; /* evita estourar em telas pequenas */
     align-self: center;
     justify-self: center;
     background: #ffffff;
@@ -51,7 +55,7 @@ body {
     border-radius: 14px;
     border: 5px solid #5d0f15;
     box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-    max-height: calc(100vh - 100px - 60px- 40px);
+    max-height: calc(100vh - 100px - 60px- 40px); /* Cálculo incomum: limita a altura conforme header e footer */
     overflow: auto;
     text-align: center;
 }
@@ -71,7 +75,7 @@ body {
 
 .linha input {
     flex: 1;
-    min-width: 0;           
+    min-width: 0; /* Evita quebra em flex */    
     padding: 13px 16px;
     border-radius: 25px;
     border: none;

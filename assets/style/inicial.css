@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --primary-color: #5b1622;
-    --primary-light: #8b2435;
-    --primary-dark: #3a0d14;
-    --text-color: #1a1515;
-    --background-color: #f4f4f4;
-    --card-background: #ffffff;
-    --shadow-light: rgba(0, 0, 0, 0.08);
-    --shadow-dark: rgba(0, 0, 0, 0.20);
+    --primary-color: #5b1622; /* cor principal do tema */
+    --primary-light: #8b2435; /* versão mais clara da cor principal */
+    --primary-dark: #3a0d14;  /* versão mais escura da cor principal */
+    --text-color: #1a1515;    /* cor padrão do texto */
+    --background-color: #f4f4f4; /* cor de fundo geral da página */
+    --card-background: #ffffff;  /* cor de fundo dos cards/caixas */
+    --shadow-light: rgba(0, 0, 0, 0.08); /* sombra leve */
+    --shadow-dark: rgba(0, 0, 0, 0.20); /* sombra mais forte */
 }
 
 * {
@@ -19,7 +19,7 @@
 }
 
 body {
-    background: var(--background-color);
+    background: var(--background-color); /* aplica a cor definida na variável --background-color */
 }
 
 header {
@@ -36,11 +36,10 @@ header .logo img {
 }
 
 header .usuario i {
-    font-size: 38px;
+    font-size: 40px;
     color: white;
     cursor: pointer;
-    transition: color 0.2s;
-    margin-right: 10px;
+    margin-left: 1150px;
 }
 
 header .usuario a:hover i {
@@ -62,7 +61,7 @@ header .usuario a:hover i {
 .intro p {
     font-size: 1.1rem;
     margin-top: 5px;
-    color: var(--text-color);
+    color: var(--text-color); /* aplica a cor definida na variável --text-color */
     font-weight: 300;
 }
 
@@ -75,7 +74,7 @@ header .usuario a:hover i {
     display: flex;
     align-items: center;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-    border: 1px solid var(--primary-dark);
+    border: 1px solid var(--primary-dark); /* borda fina usando a cor da variável --primary-dark */
 }
 
 .search-bar i {
@@ -126,9 +125,7 @@ header .usuario a:hover i {
 
 .items-grid {
     display: grid;
-    /* Configuração responsiva por padrão: minmax(200px) permite 
-       que o grid se ajuste automaticamente em 3, 4 ou mais colunas */
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Configuração responsiva por padrão: minmax(200px) permite que o grid se ajuste automaticamente em 3, 4 ou mais colunas */
     gap: 30px;
     padding-bottom: 50px;
 }
@@ -220,24 +217,24 @@ header .usuario a:hover i {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    z-index: 1000;
+    z-index: 1000; /* Garante que este elemento fique por cima dos outros */
 }
 
 .modal-content {
-    background: var(--card-background);
+    background: var(--card-background); /* usa a cor salva na variável CSS --card-background */
     width: 400px;
     padding: 30px;
     border-radius: 20px;
     text-align: left;
     position: relative;
-    box-shadow: 0 20px 40px var(--shadow-dark);
+    box-shadow: 0 20px 40px var(--shadow-dark); /* adiciona sombra forte abaixo do elemento usando a variável --shadow-dark */
     animation: fadeIn 0.3s ease-out; /* Animação */
 }
 
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-20px); /* move o elemento 20px para cima */
     }
 
     to {
@@ -247,7 +244,7 @@ header .usuario a:hover i {
 }
 
 .close {
-    position: absolute;
+    position: absolute; /* posiciona o elemento de forma independente, ignorando o fluxo normal da página */
     top: 15px;
     right: 20px;
     font-size: 32px;
@@ -259,7 +256,7 @@ header .usuario a:hover i {
 }
 
 .close:hover {
-    color: var(--primary-light);
+    color: var(--primary-light); /* usa a cor definida na variável CSS --primary-light */
     transform: rotate(90deg);
 }
 
